@@ -1,0 +1,29 @@
+<%= form_with(model: @character, local: true) do |f| %>
+  <%= render "errors", object: @character %>
+
+  <%= f.label :player_name %>
+  <%= f.text_field :player_name, autofocus: true %>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :race %>
+  <%= f.select :race, Character::RACES %>
+  <br>
+  <%= f.label :character_class %>
+  <%= f.select :character_class, Character::CLASSES %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+
+"background"
+"alignment"
+"ideals"
+"personality_traits"
+"bonds"
+"flaws"
+"eyes"
+"hair"
+"skin"
+"backstory"

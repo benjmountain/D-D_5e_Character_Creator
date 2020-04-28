@@ -1,0 +1,18 @@
+<h1>
+  <%= @character.player_name %>'s selected Champion:
+</h1>
+
+<p>
+Name:
+  <b><%= @character.name == nil ? "Seems your character has no name - go ahead and Edit to give them one" : @character.name %></b>
+<br>
+<br>
+Race: <%= @character.race %>
+<br>
+Class: <%= @character.character_class %>
+</p>
+<%= link_to "Edit the character", edit_character_path %>
+<br>
+<br>
+<%= link_to "REMOVE THE CHARACTER FROM THIS PLANE OF EXISTENCE", character_path, method: :delete,
+                data: { confirm: 'Are you sure?' } %>

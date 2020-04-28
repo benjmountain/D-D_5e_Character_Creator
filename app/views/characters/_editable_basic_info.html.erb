@@ -1,0 +1,11 @@
+<%= form_with(model: @character, local: true) do |f| %>
+  <%= render "errors", object: @character %>
+
+  <%= f.label :player_name %>
+  <%= f.text_field :player_name, autofocus: true %>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.submit %>
+<% end %>

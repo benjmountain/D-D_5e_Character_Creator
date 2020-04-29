@@ -4,26 +4,48 @@
   <%= f.label :player_name %>
   <%= f.text_field :player_name, autofocus: true %>
   <br>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <h3>Physical Traits</h3>
   <br>
   <%= f.label :race %>
   <%= f.select :race, Character::RACES %>
   <br>
+  <%= f.label :eyes %>
+  <%= f.text_field :eyes %>
+  <br>
+  <%= f.label :hair %>
+  <%= f.text_field :hair %>
+  <br>
+  <%= f.label :skin %>
+  <%= f.text_field :skin %>
+  <br>
+  <h3>Character Traits</h3>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
   <%= f.label :character_class %>
   <%= f.select :character_class, Character::CLASSES %>
   <br>
+  <%= f.label :background %>
+  <%= f.select :background, Character::BACKGROUNDS %>
+  <br>
+  <%= f.label :alignment %>
+  <%= f.select :alignment, Character::ALIGNMENTS %>
+  <br>
+  <%= f.label :ideals %>
+  <%= f.text_area :ideals, value: "The thing that drives your character"  %>
+  <br>
+  <%= f.label :bonds %>
+  <%= f.text_area :bonds, value: "This represents your character's connection to people, places, and events"  %>
+  <br>
+  <%= f.label :flaws %>
+  <%= f.text_area :flaws, value: "Your character's vice, compulsion, fear, or weakness"  %>
+  <br>
+  <%= f.label :personality_traits %>
+  <%= f.text_area :personality_traits, value: "Choose 2 - these are small, simple ways to help you set your character apart from every other character"  %>
+  <br>
+  <%= f.label :backstory %>
+  <%= f.text_area :backstory %>
+  <br>
   <%= f.submit %>
 <% end %>
-
-
-"background"
-"alignment"
-"ideals"
-"personality_traits"
-"bonds"
-"flaws"
-"eyes"
-"hair"
-"skin"
-"backstory"

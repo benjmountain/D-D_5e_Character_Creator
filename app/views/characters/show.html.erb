@@ -2,7 +2,6 @@
   <%= @character.player_name %>'s selected Champion:
 </h1>
 
-<p>
 Name:
   <b><%= @character.name == nil ? "Seems your character has no name - go ahead and Edit to give them one" : @character.name %></b>
 <br>
@@ -10,7 +9,24 @@ Name:
 Race: <%= @character.race %>
 <br>
 Class: <%= @character.character_class %>
+<br>
+<h3>Physical Description:</h3>
+<p>
+Eyes: <%= @character.eyes %>
+<br>
+Hair: <%= @character.hair %>
+<br>
+Skin: <%= @character.skin %>
 </p>
+<h3>Character Description</h3>
+<p>
+Alignment: <%= @character.alignment %>
+<br>
+Background: <%= @character.background %>
+<br>
+Backstory: <%= @character.backstory %>
+</p>
+<br>
 <%= link_to "Edit the character", edit_character_path %>
 <br>
 <br>

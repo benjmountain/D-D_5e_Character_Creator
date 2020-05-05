@@ -7118,3 +7118,151 @@ Processing by CharactersController#index as HTML
 Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 5821)
 
 
+Started GET "/characters" for ::1 at 2020-04-30 14:41:38 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 12339)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 187)
+Completed 200 OK in 1365ms (Views: 1351.8ms | ActiveRecord: 1.5ms | Allocations: 1459548)
+
+
+Started GET "/characters" for ::1 at 2020-04-30 14:46:13 -0400
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 633)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 5828)
+
+
+Started GET "/characters/new" for ::1 at 2020-04-30 14:46:26 -0400
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/_errors.html.erb (Duration: 1.5ms | Allocations: 205)
+  Rendered characters/_basic_info.html.erb (Duration: 32.0ms | Allocations: 6293)
+  Rendered characters/new.html.erb within layouts/application (Duration: 34.4ms | Allocations: 6599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 54)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.0ms | Allocations: 11885)
+
+
+Started GET "/characters/new" for ::1 at 2020-04-30 14:47:09 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered characters/_errors.html.erb (Duration: 0.6ms | Allocations: 198)
+  Rendered characters/_basic_info.html.erb (Duration: 8.9ms | Allocations: 5307)
+  Rendered characters/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 177)
+Completed 200 OK in 39ms (Views: 21.9ms | ActiveRecord: 0.8ms | Allocations: 24171)
+
+
+Started POST "/characters" for ::1 at 2020-04-30 14:48:23 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"eiY6kXMOxu8TZeVSbJUfTJwjdk/ctK2GiEYjLJbW19yDuBXyRUykVCSjZ+hS1IDEZnJnNiSzm//A6W9f2nXBNw==", "character"=>{"player_name"=>"Eric", "race"=>"Tiefling", "eyes"=>"Yellow", "hair"=>"Blonde", "skin"=>"Grey", "name"=>"Yardnald", "character_class"=>"Rogue", "background"=>"Entertainer", "alignment"=>"Chaotic-Good", "ideals"=>"I love rogueing", "bonds"=>"Love other rogues", "flaws"=>"I love stealing", "personality_traits"=>"I love stealing\r\nand rogueing", "backstory"=>"This is a backstory where you write some stuff and it has a 50 character minimum"}, "commit"=>"Create Character"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Create (1.3ms)[0m  [1m[32mINSERT INTO "characters" ("player_name", "name", "background", "character_class", "alignment", "ideals", "personality_traits", "bonds", "flaws", "race", "eyes", "hair", "skin", "backstory", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_name", "Eric"], ["name", "Yardnald"], ["background", "Entertainer"], ["character_class", "Rogue"], ["alignment", "Chaotic-Good"], ["ideals", "I love rogueing"], ["personality_traits", "I love stealing\r\nand rogueing"], ["bonds", "Love other rogues"], ["flaws", "I love stealing"], ["race", "Tiefling"], ["eyes", "Yellow"], ["hair", "Blonde"], ["skin", "Grey"], ["backstory", "This is a backstory where you write some stuff and it has a 50 character minimum"], ["created_at", "2020-04-30 18:48:23.094745"], ["updated_at", "2020-04-30 18:48:23.094745"]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+Redirected to http://localhost:3000/characters/12
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms | Allocations: 3390)
+
+
+Started GET "/characters/12" for ::1 at 2020-04-30 14:48:23 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 471)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 53)
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 6819)
+
+
+Started GET "/characters/12/edit" for ::1 at 2020-04-30 14:48:33 -0400
+Processing by CharactersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCharacter Load (0.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:25:in `edit'
+  Rendering characters/edit.html.erb within layouts/application
+  Rendered characters/_errors.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered characters/_editable_basic_info.html.erb (Duration: 2.4ms | Allocations: 1291)
+  Rendered characters/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 52)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.1ms | Allocations: 7475)
+
+
+Started PATCH "/characters/12" for ::1 at 2020-04-30 14:48:43 -0400
+Processing by CharactersController#update as HTML
+  Parameters: {"authenticity_token"=>"bf+gmTZjyzu+inEfO44KTxSKNIY3YLXUQmY4COf+PwFxLwV8Co3hTK/ciuhcWvvZ0HQDvv5hEv6j+6i+Sk87VQ==", "character"=>{"player_name"=>"Eric", "name"=>"Yardnald 2.0", "backstory"=>"This is a backstory where you write some stuff and it has a 50 character minimum"}, "commit"=>"Update Character", "id"=>"12"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+  [1m[36mCharacter Update (0.4ms)[0m  [1m[33mUPDATE "characters" SET "name" = ?, "updated_at" = ? WHERE "characters"."id" = ?[0m  [["name", "Yardnald 2.0"], ["updated_at", "2020-04-30 18:48:43.477010"], ["id", 12]]
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+Redirected to http://localhost:3000/characters/12
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms | Allocations: 3645)
+
+
+Started GET "/characters/12" for ::1 at 2020-04-30 14:48:43 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 5878)
+
+
+Started GET "/characters" for ::1 at 2020-04-30 14:48:44 -0400
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 52)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 6202)
+
+
+Started GET "/characters/12" for ::1 at 2020-04-30 14:48:46 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms | Allocations: 5870)
+
+
+Started GET "/" for ::1 at 2020-04-30 15:45:09 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 714)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.7ms | Allocations: 5891)
+
+

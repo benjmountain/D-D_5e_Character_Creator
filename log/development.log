@@ -7266,3 +7266,27 @@ Processing by CharactersController#index as HTML
 Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.7ms | Allocations: 5891)
 
 
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "db/development"."my_database_development" ENCODING = 'utf8'[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "db/development"."my_database_development" ENCODING = 'utf8'[0m
+  [1m[35m (165.2ms)[0m  [1m[35mCREATE DATABASE "db/my_database_development" ENCODING = 'utf8'[0m
+  [1m[35m (102.3ms)[0m  [1m[35mCREATE DATABASE "db/my_database_test" ENCODING = 'utf8'[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5942031735794992950)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacters (20200420202901)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "characters" ("id" bigserial primary key, "player_name" character varying, "name" character varying, "background" character varying, "class" character varying, "alignment" character varying, "ideals" character varying, "personality_traits" character varying, "bonds" character varying, "flaws" character varying, "race" character varying, "eyes" character varying, "hair" character varying, "skin" character varying, "backstory" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200420202901"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameCharactersClassColumn (20200420211657)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "characters" RENAME COLUMN "class" TO "character_class"[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200420211657"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-05 14:38:14.076855"], ["updated_at", "2020-05-05 14:38:14.076855"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5942031735794992950)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

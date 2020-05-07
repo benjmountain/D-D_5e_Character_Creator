@@ -47,5 +47,6 @@ private
 
 def character_params
   params.require(:character).permit(:player_name, :name, :character_class, :race, :eyes, :skin, :hair,
-              :background, :alignment, :ideals, :bonds, :flaws, :personality_traits, :backstory)
+              :background, :alignment, :ideals, :bonds, :flaws, :personality_traits, :backstory, :weight,
+              :age)
 end

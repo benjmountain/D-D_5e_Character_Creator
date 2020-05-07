@@ -1,0 +1,31 @@
+<%= form_with(model: @character, local: true) do |f| %>
+  <%= render "layouts/errors", object: @character %>
+
+  <h3>What is your name Player?</h3>
+  <%= f.label :player_name %>
+  <%= f.text_field :player_name, autofocus: true %>
+  <br>
+  <h3>What is the name of your Champion?</h3>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <h3>And who is your champion?</h3>
+  <p>Every character belongs to a race, one of the many intelligent humanoid species in the D&D world.</p>
+  <p>The race you choose contributes to your character's identity in an important way, by establishing
+  a general appearance and the natural talents gained form culture and ancestry.</p>
+  <p><b>Please refer to page 17 of the Player's Handbook (PHB) to see the full list of races and their traits</b></p>
+  <%= f.label :race %>
+  <%= f.select :race, Character::RACES %>
+  <br>
+  <h3>What does your champion do?</h3>
+  <p>Class is the primary definition of what your character can do. It's more than a profession; it's your character's
+  calling.</p>
+  <p>Your class gives you a variety of special features, such as a fighter's mastery of weapons and armor, and a
+  wizard's spells.</p>
+  <p><b>Please refer to page 45 of the PHB to see the full table of classes and their features</b></p>
+  <%= f.label :character_class %>
+  <%= f.select :character_class, Character::CLASSES %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>

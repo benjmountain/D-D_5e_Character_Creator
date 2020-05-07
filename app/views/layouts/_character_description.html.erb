@@ -1,13 +1,7 @@
 <%= form_with(model: @character, local: true) do |f| %>
   <%= render "errors", object: @character %>
-
-  <%= f.label :player_name %>
-  <%= f.text_field :player_name, autofocus: true %>
-  <br>
+  <h2>Time to flush out your Champion</h2>
   <h3>Physical Traits</h3>
-  <br>
-  <%= f.label :race %>
-  <%= f.select :race, Character::RACES %>
   <br>
   <%= f.label :eyes %>
   <%= f.text_field :eyes %>
@@ -18,16 +12,12 @@
   <%= f.label :skin %>
   <%= f.text_field :skin %>
   <br>
-  <h3>Character Traits</h3>
-  <br>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :character_class %>
-  <%= f.select :character_class, Character::CLASSES %>
-  <br>
+
   <%= f.label :background %>
   <%= f.select :background, Character::BACKGROUNDS %>
+
+
+  <h3>Character Traits</h3>
   <br>
   <%= f.label :alignment %>
   <%= f.select :alignment, Character::ALIGNMENTS %>

@@ -7969,3 +7969,365 @@ Processing by CharactersController#new as HTML
 Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 12017)
 
 
+Started GET "/" for ::1 at 2020-05-07 12:16:14 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 49.9ms | Allocations: 26115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 187)
+Completed 200 OK in 1078ms (Views: 1063.5ms | ActiveRecord: 4.7ms | Allocations: 1479881)
+
+
+Started GET "/characters/new" for ::1 at 2020-05-07 12:16:16 -0400
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.8ms | Allocations: 205)
+  Rendered layouts/_all_fields.html.erb (Duration: 19.3ms | Allocations: 7645)
+  Rendered characters/new.html.erb within layouts/application (Duration: 20.8ms | Allocations: 7962)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 54)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 13353)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:16:19 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"DJjW7YyKcY4/7LH0ANzPf4mN5nMdrFD1LGX0IlxSVcuLh28DRxfK4X7gbK+RNj8jIPFlMd4KcjA+vpIsC5524A==", "character"=>{"player_name"=>"", "name"=>"", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"", "hair"=>"", "skin"=>"12", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>""}, "commit"=>"Create Character"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.0ms | Allocations: 946)
+  Rendered layouts/_all_fields.html.erb (Duration: 5.3ms | Allocations: 5267)
+  Rendered characters/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 23ms (Views: 12.2ms | ActiveRecord: 0.8ms | Allocations: 17369)
+
+
+Started GET "/characters" for ::1 at 2020-05-07 12:16:33 -0400
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 24200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 53)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 3.1ms | Allocations: 31190)
+
+
+Started GET "/characters/new" for ::1 at 2020-05-07 12:16:35 -0400
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layouts/_all_fields.html.erb (Duration: 5.0ms | Allocations: 4391)
+  Rendered characters/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 9722)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:16:38 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"hNARxSuR2NEb7jPjSHD13ZkA9evINv0cYbMTdXJvosMDz6gr4Axjvlri7rjZmgWBMHx2qQuQ39lzaHV7JaOB6A==", "character"=>{"player_name"=>"", "name"=>"", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"", "hair"=>"", "skin"=>"12", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>""}, "commit"=>"Create Character"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.0ms | Allocations: 941)
+  Rendered layouts/_all_fields.html.erb (Duration: 19.5ms | Allocations: 5260)
+  Rendered characters/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 5334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 35ms (Views: 26.1ms | ActiveRecord: 0.9ms | Allocations: 16691)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:16:52 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"ChuTVtyA5AU4Cs2UAzBKXFvwHZ4EWEX6/2H/IOJjTAnzhbw16sKGvg/MTy49cdXUoaEM5/xfc4O3zrNTrsBa4g==", "character"=>{"player_name"=>"fdas", "name"=>"dfsa", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"dsaf", "hair"=>"adfs", "skin"=>"12", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>"dsafdsafgdsagasfdfadsfasdfadsfads"}, "commit"=>"Create Character"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", "dfsa"], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.5ms | Allocations: 411)
+  Rendered layouts/_all_fields.html.erb (Duration: 5.4ms | Allocations: 4710)
+  Rendered characters/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 21ms (Views: 12.2ms | ActiveRecord: 1.1ms | Allocations: 14629)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:16:55 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"g9cfNpPf7KbQY/RMFqVrkbVVdAmRehgfGny5hrBOnJ96STBVpZ2OHeeldvYo5PQZTwRlcGl9LmZS0/X1/O2KdA==", "character"=>{"player_name"=>"fdas", "name"=>"dfsa", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"dsaf", "hair"=>"adfs", "skin"=>"12", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>"dsafdsafgdsagasfdfadsfasdfadsfadsfadsfdsafsd"}, "commit"=>"Create Character"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", "dfsa"], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.5ms | Allocations: 411)
+  Rendered layouts/_all_fields.html.erb (Duration: 4.7ms | Allocations: 4710)
+  Rendered characters/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 4784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 0.9ms | Allocations: 14612)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:16:58 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"tF2oAp5MbPUKd7LJZVtDWC4pDxPoM62giNbRobbQfnBNw4dhqA4OTj2xMHNbGtzQ1HgeahA0m9nAeZ3S+nNomw==", "character"=>{"player_name"=>"fdas", "name"=>"dfsa", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"dsaf", "hair"=>"adfs", "skin"=>"12", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>"dsafdsafgdsagafdsafdasfadsfsfdfadsfasdfadsfadsfadsfdsafsd"}, "commit"=>"Create Character"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", "dfsa"], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered layouts/_all_fields.html.erb (Duration: 11.2ms | Allocations: 4579)
+  Rendered characters/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4653)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 35ms (Views: 28.9ms | ActiveRecord: 0.6ms | Allocations: 14182)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:17:06 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"xvYeq64d23VkInXvsOhpMKoQIoMVY9H8grZXnnM5jdE/aDHImF+5zlPk91WOqfa4UEEz+u1k54XKGRvtP5qbOg==", "character"=>{"player_name"=>"fdas", "name"=>"dfsa", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"dsaf", "hair"=>"adfs", "skin"=>"12", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>"dsafdsafgdsagafdsafdasfadsfsfdfadsfasdfadsfadsfadsfdsafsd"}, "commit"=>"Create Character"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", "dfsa"], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.4ms | Allocations: 283)
+  Rendered layouts/_all_fields.html.erb (Duration: 8.9ms | Allocations: 4579)
+  Rendered characters/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4653)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 49)
+Completed 200 OK in 31ms (Views: 21.3ms | ActiveRecord: 0.6ms | Allocations: 14183)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:17:20 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"1GTrUjTL5YYw3GU+dfGvASSBrnnuPaqne4MifkexEZEt+sQxAomHPQca54RLsDCJ3tC/ABY6nN4zLG4NCxIHeg==", "character"=>{"player_name"=>"fdas", "name"=>"dfsa", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"dsaf", "hair"=>"adfs", "skin"=>"0", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>"dsafdsafgdsagafdsafdasfadsfsfdfadsfasdfadsfadsfadsfdsafsd"}, "commit"=>"Create Character"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", "dfsa"], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.4ms | Allocations: 283)
+  Rendered layouts/_all_fields.html.erb (Duration: 13.8ms | Allocations: 4579)
+  Rendered characters/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4653)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 37ms (Views: 24.2ms | ActiveRecord: 0.7ms | Allocations: 14178)
+
+
+Started GET "/characters" for ::1 at 2020-05-07 12:17:39 -0400
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 177)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.4ms | Allocations: 7275)
+
+
+Started GET "/characters/new" for ::1 at 2020-05-07 12:17:40 -0400
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered layouts/_all_fields.html.erb (Duration: 6.8ms | Allocations: 5292)
+  Rendered characters/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 5595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 54)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 10965)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:17:44 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"xvK/DEtt5tNVnqmYlDEkhglABKW3CwirvCz8ceAn/W5B7QbigPBdvBSSdMMF29TaoDyH53StKm6u95p/t+veRQ==", "character"=>{"player_name"=>"", "name"=>"", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"", "hair"=>"", "skin"=>"", "weight"=>"0", "age"=>"0", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>""}, "commit"=>"Create Character"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.3ms | Allocations: 1066)
+  Rendered layouts/_all_fields.html.erb (Duration: 5.6ms | Allocations: 5382)
+  Rendered characters/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 5456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 21ms (Views: 12.2ms | ActiveRecord: 0.6ms | Allocations: 16249)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:17:50 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"nLkONzoIEi42YTfJSahq5QSDeWKMwfd4mX07A6z7aRNlJyFUDEpwlQGntXN36fVt/tJoG3TGwQHR0ndw4Fh/+A==", "character"=>{"player_name"=>"", "name"=>"", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"", "hair"=>"", "skin"=>"", "weight"=>"012", "age"=>"012", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>""}, "commit"=>"Create Character"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.1ms | Allocations: 810)
+  Rendered layouts/_all_fields.html.erb (Duration: 5.7ms | Allocations: 5116)
+  Rendered characters/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 5190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 15246)
+
+
+Started GET "/characters" for ::1 at 2020-05-07 12:19:02 -0400
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:4
+  Rendered characters/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 7264)
+
+
+Started GET "/characters/1" for ::1 at 2020-05-07 12:19:03 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 492)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 53)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 6594)
+
+
+Started GET "/characters/1" for ::1 at 2020-05-07 12:19:03 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 5982)
+
+
+Started GET "/characters/1" for ::1 at 2020-05-07 12:19:21 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 7499)
+
+
+Started GET "/characters/1" for ::1 at 2020-05-07 12:19:59 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacter Load (0.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 7525)
+
+
+Started GET "/characters/1" for ::1 at 2020-05-07 12:20:22 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 522)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 172)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 7522)
+
+
+Started GET "/characters/new" for ::1 at 2020-05-07 12:20:27 -0400
+Processing by CharactersController#new as HTML
+  Rendering characters/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.7ms | Allocations: 196)
+  Rendered layouts/_all_fields.html.erb (Duration: 9.1ms | Allocations: 5291)
+  Rendered characters/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 5593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 54)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 10951)
+
+
+Started POST "/characters" for ::1 at 2020-05-07 12:20:55 -0400
+Processing by CharactersController#create as HTML
+  Parameters: {"authenticity_token"=>"SRXKWCQsPxD+aKzkkvegQLpccIZwe6EYjDTuTpCBR4zOCnO277GEf79kcb8DHVAcEyDzxLPdg92e74hAx01kpw==", "character"=>{"player_name"=>"TEstingser", "name"=>"TEstingser", "race"=>"Dragonborn", "character_class"=>"Barbarian", "eyes"=>"Grey", "hair"=>"grey", "skin"=>"grey", "weight"=>"120", "age"=>"15", "background"=>"Charlatan", "alignment"=>"Lawful-Good", "ideals"=>"The thing that drives your character", "bonds"=>"This represents your character's connection to people, places, and events", "flaws"=>"Your character's vice, compulsion, fear, or weakness", "personality_traits"=>"Choose 2 - these are small, simple ways to help you set your character apart from every other character", "backstory"=>"Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. "}, "commit"=>"Create Character"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "characters" WHERE "characters"."name" = $1 LIMIT $2[0m  [["name", "TEstingser"], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("player_name", "name", "background", "character_class", "alignment", "ideals", "personality_traits", "bonds", "flaws", "race", "eyes", "hair", "skin", "backstory", "created_at", "updated_at", "weight", "age") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["player_name", "TEstingser"], ["name", "TEstingser"], ["background", "Charlatan"], ["character_class", "Barbarian"], ["alignment", "Lawful-Good"], ["ideals", "The thing that drives your character"], ["personality_traits", "Choose 2 - these are small, simple ways to help you set your character apart from every other character"], ["bonds", "This represents your character's connection to people, places, and events"], ["flaws", "Your character's vice, compulsion, fear, or weakness"], ["race", "Dragonborn"], ["eyes", "Grey"], ["hair", "grey"], ["skin", "grey"], ["backstory", "Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. Thisisatest. "], ["created_at", "2020-05-07 16:20:55.890759"], ["updated_at", "2020-05-07 16:20:55.890759"], ["weight", 120], ["age", 15]]
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/characters_controller.rb:13:in `create'
+Redirected to http://localhost:3000/characters/2
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms | Allocations: 4319)
+
+
+Started GET "/characters/2" for ::1 at 2020-05-07 12:20:55 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 5974)
+
+
+Started GET "/characters/2" for ::1 at 2020-05-07 12:21:23 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 5985)
+
+
+Started GET "/characters/2" for ::1 at 2020-05-07 12:21:50 -0400
+Processing by CharactersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:21:in `show'
+  Rendering characters/show.html.erb within layouts/application
+  Rendered characters/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 172)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 7527)
+
+

@@ -5,6 +5,9 @@
 Name:
   <b><%= @character.name == nil ? "Seems your character has no name - go ahead and Edit to give them one" : @character.name %></b>
 <br>
+Level: <%= @character.level %>
+<br>
+Experience: <%= @character.experience_points %>
 <br>
 Race: <%= @character.race %>
 <br>
@@ -12,6 +15,10 @@ Class: <%= @character.character_class %>
 <br>
 <h3>Physical Description:</h3>
 <p>
+Age: <%= @character.age %>
+<br>
+Weight: <%= @character.weight %>
+<br>
 Eyes: <%= @character.eyes %>
 <br>
 Hair: <%= @character.hair %>

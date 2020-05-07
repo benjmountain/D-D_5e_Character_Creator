@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_20_211657) do
+ActiveRecord::Schema.define(version: 2020_05_07_005421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,27 @@ ActiveRecord::Schema.define(version: 2020_04_20_211657) do
     t.text "backstory"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "level", default: 1
+    t.integer "experience_points", default: 0
+    t.integer "hit_points"
+    t.integer "temp_hit_points"
+    t.integer "hit_dice"
+    t.integer "speed"
+    t.integer "initiative"
+    t.boolean "inspiration", default: false
+    t.integer "weight"
+    t.integer "age"
+    t.integer "strength"
+    t.integer "dexterity"
+    t.integer "constitution"
+    t.integer "intelligence"
+    t.integer "wisdom"
+    t.integer "charisma"
+    t.integer "proficiency_bonus", default: 2
+    t.text "skills"
+    t.text "class_features"
+    t.text "race_traits"
+    t.text "languages"
   end
 
 end
